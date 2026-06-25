@@ -11,6 +11,26 @@ arr = [1, 2, 4, 5, 6, 3, 2]
 print(arr[2])
 ```
 
+## O(log n) – Logarithmic Time
+
+The execution time grows logarithmically as the input size increases. Each step reduces the problem size by a constant factor, so doubling the input size adds only a fixed amount of work.
+
+**Example:**
+
+```python
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+left, right = 0, len(arr) - 1
+while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == 5:
+        print('Found at', mid)
+        break
+    elif arr[mid] < 5:
+        left = mid + 1
+    else:
+        right = mid - 1
+```
+
 ## O(n) – Linear Time
 
 The execution time increases along with the size of the input. If the input doubles, the execution time doubles.
